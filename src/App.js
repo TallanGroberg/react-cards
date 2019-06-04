@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, } from "semantic-ui-react";
 import './App.css';
 import Card from './Card'
+import MakeCard from './MakeCard';
 
 class App extends Component {
 
@@ -12,12 +13,17 @@ class App extends Component {
     ]
   }
 
+  // toggleSide = () => this.setState({})
+
   render() {
     const { faces } = this.state;
     return (
+      <Container style={{ padding: "15px", }}>
       <div>
         <Card name="flash cards" cards={faces} />
+        <MakeCard />
       </div>
+    </Container>
     );
   }
 }
